@@ -7,7 +7,9 @@ const HomePage = props => {
   console.log(props);
   return (
     <div>
-      <button onClick={() => props.history.push('/topics')}>Topics </button>
+      <button onClick={() => props.history.push('/blogs/asdfasdf/topics')}>Topics </button>
+      <br />
+      <Link to='/blogs/asdfasdf/topics' >Topics</Link>
       <h1>HOME PAGE</h1>
     </div>
   );
@@ -36,10 +38,10 @@ function App() {
   return (
     <div>
       <Route exact path='/' component={HomePage} />
-      <Route exact path='/blog/asdqw/topics' component={TopicsList} />
-      <Route path='/blog/asdqw/topics/:topicId' component={TopicDetail} />
-      <Route exact path='/blog/topics' component={TopicsList} />
-      <Route path='/blog/topics/:topicId' component={TopicDetail} />
+      <Route exact path='/blogs/asdfasdf/topics' component={TopicsList} />
+      <Route path='/blogs/asdfasdf/topics/:topicId' component={TopicDetail} />
+      <Route exact path='/blogs/topics' component={TopicsList} />
+      <Route path='/blogs/topics/:topicId' component={TopicDetail} />
     </div>
   );
 }
